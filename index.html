@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For AAshita💖</title>
+<style>
+body{
+    text-align:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    font-family:Comic Sans MS;
+    overflow:hidden;
+}
+
+button{
+    padding:15px 25px;
+    font-size:20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+    position:absolute;
+}
+
+#yesBtn{
+    background:#ff2e63;
+    color:white;
+    left:40%;
+    top:60%;
+}
+
+#noBtn{
+    background:#aaa;
+    color:white;
+    left:55%;
+    top:60%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💫 Meri Pyari Aashita 💫</h1>
+<h2>Will you be My Valentine? 💘</h2>
+
+<button id="yesBtn">Yes 💖</button>
+<button id="noBtn">No 😏</button>
+
+<script>
+let yesBtn=document.getElementById("yesBtn");
+let noBtn=document.getElementById("noBtn");
+
+let yesSize=20;
+let noSize=20;
+
+function moveNo(){
+    noSize-=2;
+    if(noSize<8) noSize=8;
+    noBtn.style.fontSize=noSize+"px";
+
+    let x=Math.random()*80;
+    let y=Math.random()*70;
+
+    noBtn.style.left=x+"%";
+    noBtn.style.top=y+"%";
+
+    yesSize+=6;
+    yesBtn.style.fontSize=yesSize+"px";
+}
+
+noBtn.addEventListener("mouseover",moveNo);
+noBtn.addEventListener("click",moveNo);
+
+yesBtn.addEventListener("click",function(){
+    window.location.href="celebration.html";
+});
+</script>
+
+</body>
+</html>
+
